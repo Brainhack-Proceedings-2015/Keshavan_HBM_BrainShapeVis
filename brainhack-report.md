@@ -1,7 +1,7 @@
 ---
 event: '2015 OHBM Hackathon (HI)'
 
-title:  'DueCredit: automated collection of citations for software, methods, and data'
+title: 'Interactive online brain shape visualization'  
 
 author:
 
