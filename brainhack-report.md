@@ -58,5 +58,10 @@ Over the course of two afternoons at the Human Brain Mapping 2015 conference’s
 #Results
 The current version of our browser-based interactive visualization of a left hemisphere of a human brain is available at roygbiv.mindboggle.info. Click and drag to rotate this brain, scroll to zoom in and out, and click on any region of the brain while pressing the shift key to produce an accompanying plot of shape measures for that region. This will render all other regions transparent. Shift-click outside the brain to return opacity to all regions.
 
+\begin{figure}[h!]
+  \includegraphics[width=.42\textwidth]{roygbiv.png}
+  \caption{\label{centfig} Example visualization.}
+\end{figure}
+
 # Conclusions
 We have received very positive feedback on our efforts at the hackathon, and have since received several requests and encouragement to build this visualization out to accommodate other data besides shape information and to enable the visual evaluation of thousands of brains. We hope to continue this work with the help of others!
