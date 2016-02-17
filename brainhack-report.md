@@ -73,7 +73,10 @@ We completed an initial version of our browser-based interactive visualization t
 ![Example visualization](https://github.com/Brainhack-Proceedings-2015/Keshavan_HBM_BrainShapeVis/blob/master/roygbiv.png "Example visualization")
 
 
+After the hackathon, we refactored the code to use an object-based approach. This allows multiple brains to be shown simultaneously. This approach was used to create a master-slave interaction: selection of a ROI in one hemisphere loads data for display on a second hemisphere. This approach was used in a [dynamic poster presented at Society for Neuroscience in 2015](http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/) [3].
 
+
+![Dynamic poster visualization](https://github.com/Brainhack-Proceedings-2015/Keshavan_HBM_BrainShapeVis/blob/master/rogybiv-master-slave.png "Example master/slave visualization")
 
 
 # Conclusions
@@ -85,3 +88,4 @@ We have received very positive feedback for our efforts at the hackathon, and ha
 [1] Klein, A., & Hirsch, J. (2005). Mindboggle: a scatterbrained approach to automate brain labeling. NeuroImage, 24(2), 261-280.
 Chicago.
 [2] Klein, A., & Tourville, J. (2012). 101 labeled brain images and a consistent human cortical labeling protocol. Front. Neurosci 6.171, 10-3389.
+[3] Cipollini, B, Bartsch, H & Cottrell, G. (2015). Exploring the anatomy and genetics of cortical asymmetries in surface area and thickness. Society for Neuroscience, 2015.
