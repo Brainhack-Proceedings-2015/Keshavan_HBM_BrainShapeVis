@@ -45,15 +45,15 @@ affiliations:
   city: La Jolla
   state: California
   country: USA
-  
-url: http://roygbiv.mindboggle.info/
+
+url: https://github.com/binarybottle/roygbiv
 
 coi: None
 
 acknow: The authors would like to thank the organizers and attendees of the 2015 OHBM Hackathon. This project is supported in part by a grant from the NSF (award 1429999).
 
-contrib: AK and AK performed the project and wrote the report. CP extended this work and is actively maintaining ROYGBIV. 
-  
+contrib: AK and AK performed the project and wrote the report. CP extended this work and is actively maintaining ROYGBIV.
+
 bibliography: brainhack-report
 
 gigascience-ref: REFXXX
