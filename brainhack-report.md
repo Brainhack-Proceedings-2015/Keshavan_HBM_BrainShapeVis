@@ -19,7 +19,7 @@ author:
 - initials: BC
   surname: Cipollini
   firstname: Ben
-  email: ben.cipollini@gmail.com
+  email: bcipolli@ucsd.edu
   affiliation: aff3
 
 affiliations:
