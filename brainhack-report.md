@@ -46,7 +46,7 @@ affiliations:
   state: California
   country: USA
   
-url: https://github.com/duecredit/duecredit
+url: http://roygbiv.mindboggle.info/
 
 coi: None
 
