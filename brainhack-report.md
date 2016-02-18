@@ -76,7 +76,7 @@ We completed an initial version of our browser-based interactive visualization t
 After the hackathon, we refactored the code to use an object-based approach. This allows multiple brains to be shown simultaneously. This approach was used to create a master-slave interaction: selection of a ROI in one hemisphere loads data for display on a second hemisphere. This approach was used in a [dynamic poster presented at Society for Neuroscience in 2015](http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/) [3].
 
 
-![Dynamic poster visualization](https://github.com/Brainhack-Proceedings-2015/Keshavan_HBM_BrainShapeVis/blob/master/rogybiv-master-slave.png "Example master/slave visualization")
+![Dynamic poster visualization](https://raw.githubusercontent.com/Brainhack-Proceedings-2015/Keshavan_HBM_BrainShapeVis/master/roygbiv-master-slave.png "Example master/slave visualization")
 
 
 # Conclusions
