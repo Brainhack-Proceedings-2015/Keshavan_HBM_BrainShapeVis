@@ -70,14 +70,12 @@ Over the course of two afternoons at the Human Brain Mapping 2015 conference’s
 # Results
 We completed an initial version of our browser-based interactive visualization tool; a left hemisphere of a human brain is available at [http://roygbiv.mindboggle.info](http://roygbiv.mindboggle.info). Click and drag to rotate this brain, scroll to zoom in and out, and click on any region of the brain while pressing the shift key to produce an accompanying plot of shape measures for that region. This will render all other regions transparent. Shift-click outside the brain to return opacity to all regions.
 
-![Example visualization](roygbiv.png "Example visualization")
-
+\begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv.png} \caption{\label{centfig} Example visualization.} \end{figure}
 
 After the hackathon, we refactored the code to use an object-based approach. This allows multiple brains to be shown simultaneously. This approach was used to create a master-slave interaction: selection of a ROI in one hemisphere loads data for display on a second hemisphere. This approach was used in a [dynamic poster presented at Society for Neuroscience in 2015](http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/) [3].
 
 
-![Dynamic poster visualization](roygbiv-master-slave.png "Example master/slave visualization")
-
+\begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv-master-slave.png} \caption{\label{centfig} Example master/slave visualization.} \end{figure}
 
 # Conclusions
 
