@@ -60,7 +60,7 @@ gigascience-ref: REFXXX
 ...
 
 # Introduction
-Our goal for the hackathon was to create an interactive Web browser application to visualize human brain image data processed by the [Mindboggle software package](url{http://mindboggle.info/)[1].
+Our goal for the hackathon was to create an interactive Web browser application to visualize human brain image data processed by the [Mindboggle software package](http://mindboggle.info/)[1].
 
 The Mindboggle project was initiated to improve the labeling as well as morphometry of brain imaging data, and to promote open science by making all data, software, and documentation freely and openly available. An interface for interactive visualization is essential for assessing issues in brain image processing and analysis, including surface reconstruction, labeling, and morphometry. Mindboggle processes human brain cortical surface meshes in the [VTK format](http://www.vtk.org/), and generates label and shape information for each anatomical region, where labels follow the Desikan-Killiany-Tourville protocol [2].
 
@@ -70,13 +70,13 @@ Over the course of two afternoons at the Human Brain Mapping 2015 conference’s
 # Results
 We completed an initial version of our browser-based interactive visualization tool; a left hemisphere of a human brain is available at [http://roygbiv.mindboggle.info](http://roygbiv.mindboggle.info). Click and drag to rotate this brain, scroll to zoom in and out, and click on any region of the brain while pressing the shift key to produce an accompanying plot of shape measures for that region. This will render all other regions transparent. Shift-click outside the brain to return opacity to all regions.
 
-![Example visualization](https://github.com/Brainhack-Proceedings-2015/Keshavan_HBM_BrainShapeVis/blob/master/roygbiv.png "Example visualization")
+![Example visualization](roygbiv.png "Example visualization")
 
 
 After the hackathon, we refactored the code to use an object-based approach. This allows multiple brains to be shown simultaneously. This approach was used to create a master-slave interaction: selection of a ROI in one hemisphere loads data for display on a second hemisphere. This approach was used in a [dynamic poster presented at Society for Neuroscience in 2015](http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/) [3].
 
 
-![Dynamic poster visualization](https://raw.githubusercontent.com/Brainhack-Proceedings-2015/Keshavan_HBM_BrainShapeVis/master/roygbiv-master-slave.png "Example master/slave visualization")
+![Dynamic poster visualization](roygbiv-master-slave.png "Example master/slave visualization")
 
 
 # Conclusions

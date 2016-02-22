@@ -76,7 +76,6 @@
 %%                                             %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %\def\includegraphic{}
 %\def\includegraphics{}
 
@@ -102,7 +101,7 @@
 
 \title{Interactive online brain shape visualization}
 \vskip2ex
-\projectURL{Project URL: \url{https://github.com/duecredit/duecredit}}
+\projectURL{Project URL: \url{https://github.com/binarybottle/roygbiv}}
 
 \author[
 addressref={aff1},
@@ -113,7 +112,12 @@ email={keshavan@berkeley.edu}
 addressref={aff2},
 %
 email={arno@binarybottle.com}
-]{\inits{ArK} \fnm{Arno} \snm{Klein}}
+]{\inits{AK} \fnm{Arno} \snm{Klein}}
+\author[
+addressref={aff3},
+%
+email={bcipolli@ucsd.edu}
+]{\inits{BC} \fnm{Ben} \snm{Cipollini}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -135,9 +139,17 @@ email={arno@binarybottle.com}
 \address[id=aff2]{%
   \orgname{Sage Bionetworks},
   \city{Seattle},
-  \street{110 Fairview Avenue North, M1-C815},
+  \street{1100 Fairview Avenue North, M1-C108},
   \postcode{98109},
   \postcode{Washington},
+  \cny{USA}
+}
+\address[id=aff3]{%
+  \orgname{UC San Diego},
+  \city{La Jolla},
+  \street{9500 Gilman Drive},
+  \postcode{92093},
+  \postcode{California},
   \cny{USA}
 }
 
@@ -186,8 +198,8 @@ email={arno@binarybottle.com}
 
 %\vskip1ex
 
-%\projectURL{\url{https://github.com/duecredit/duecredit}}
-%\projectURL{https://github.com/duecredit/duecredit}
+%\projectURL{\url{https://github.com/binarybottle/roygbiv}}
+%\projectURL{https://github.com/binarybottle/roygbiv}
 
 % MSC classifications codes, if any
 %\begin{keyword}[class=AMS]
@@ -202,14 +214,14 @@ email={arno@binarybottle.com}
 
 \end{frontmatter}
 
-%{\sffamily\bfseries\fontsize{10}{12}\selectfont Project URL: \url{https://github.com/duecredit/duecredit}}
+%{\sffamily\bfseries\fontsize{10}{12}\selectfont Project URL: \url{https://github.com/binarybottle/roygbiv}}
 
 %%% Import the body from pandoc formatted text
 \section{Introduction}\label{introduction}
 
-Create an interactive Web browser application to visualize human brain
-image data processed by the Mindboggle software
-package\footnote{\url{http://mindboggle.info/}}.
+Our goal for the hackathon was to create an interactive Web browser
+application to visualize human brain image data processed by the
+\href{http://mindboggle.info/}{Mindboggle software package}{[}1{]}.
 
 The Mindboggle project was initiated to improve the labeling as well as
 morphometry of brain imaging data, and to promote open science by making
@@ -217,47 +229,72 @@ all data, software, and documentation freely and openly available. An
 interface for interactive visualization is essential for assessing
 issues in brain image processing and analysis, including surface
 reconstruction, labeling, and morphometry. Mindboggle processes human
-brain cortical surface meshes in the VTK
-format\footnote{\url{http://www.vtk.org/}}, and generates label and
-shape information for each anatomical region, where labels follow the
-Desikan-Killiany-Tourville
-protocol\footnote{\url{http://mindboggle.info/data}}\cite{Klein2012}.
+brain cortical surface meshes in the \href{http://www.vtk.org/}{VTK
+format}, and generates label and shape information for each anatomical
+region, where labels follow the Desikan-Killiany-Tourville protocol
+{[}2{]}.
 
 \section{Approach}\label{approach}
 
 Over the course of two afternoons at the Human Brain Mapping 2015
 conference's hackathon, we evaluated several JavaScript libraries for
 creating browser-based WebGL visualizations of brain surfaces, including
-three.js\footnote{\url{ http://threejs.org/}},
-XTK\footnote{\url{https://github.com/xtk/X\#readme}}, and
-BrainBrowser\footnote{\url{https://brainbrowser.cbrain.mcgill.ca/}}.
-Three.js was chosen for ease of use and degree of active development and
+\href{http://threejs.org/}{three.js},
+\href{https://github.com/xtk/X\#readme}{XTK}, and
+\href{https://brainbrowser.cbrain.mcgill.ca/}{BrainBrowser}. Three.js
+was chosen for ease of use and degree of active development and
 community support. To accompany these surface visualizations with
-graphical plots, we chose the d3 JavaScript library for its flexibility
-and widespread use\footnote{\url{http://d3js.org/}}.
+graphical plots, we chose the \href{http://d3js.org/}{d3 JavaScript
+library} for its flexibility and widespread use.
 
 \section{Results}\label{results}
 
-The current version of our browser-based interactive visualization of a
-left hemisphere of a human brain is available at
-roygbiv.mindboggle.info. Click and drag to rotate this brain, scroll to
-zoom in and out, and click on any region of the brain while pressing the
-shift key to produce an accompanying plot of shape measures for that
-region. This will render all other regions transparent. Shift-click
-outside the brain to return opacity to all regions.
+We completed an initial version of our browser-based interactive
+visualization tool; a left hemisphere of a human brain is available at
+\url{http://roygbiv.mindboggle.info}. Click and drag to rotate this
+brain, scroll to zoom in and out, and click on any region of the brain
+while pressing the shift key to produce an accompanying plot of shape
+measures for that region. This will render all other regions
+transparent. Shift-click outside the brain to return opacity to all
+regions.
 
-\begin{figure}[h!]
-  \includegraphics[width=.42\textwidth]{roygbiv.png}
-  \caption{\label{centfig} Example visualization.}
+\begin{figure}[htbp]
+\centering
+\includegraphics{roygbiv.png}
+\caption{Example visualization}
+\end{figure}
+
+After the hackathon, we refactored the code to use an object-based
+approach. This allows multiple brains to be shown simultaneously. This
+approach was used to create a master-slave interaction: selection of a
+ROI in one hemisphere loads data for display on a second hemisphere.
+This approach was used in a
+\href{http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/}{dynamic
+poster presented at Society for Neuroscience in 2015} {[}3{]}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{roygbiv-master-slave.png}
+\caption{Dynamic poster visualization}
 \end{figure}
 
 \section{Conclusions}\label{conclusions}
 
-We have received very positive feedback on our efforts at the hackathon,
-and have since received several requests and encouragement to build this
-visualization out to accommodate other data besides shape information
-and to enable the visual evaluation of thousands of brains. We hope to
-continue this work with the help of others!
+We have received very positive feedback for our efforts at the
+hackathon, and have since received several requests and encouragement to
+build this visualization out to accommodate other data besides shape
+information and to enable the visual evaluation of thousands of brains.
+We hope to continue this work with the help of others!
+
+\section{References}\label{references}
+
+{[}1{]} Klein, A., \& Hirsch, J. (2005). Mindboggle: a scatterbrained
+approach to automate brain labeling. NeuroImage, 24(2), 261-280.
+Chicago. {[}2{]} Klein, A., \& Tourville, J. (2012). 101 labeled brain
+images and a consistent human cortical labeling protocol. Front.
+Neurosci 6.171, 10-3389. {[}3{]} Cipollini, B, Bartsch, H \& Cottrell,
+G. (2015). Exploring the anatomy and genetics of cortical asymmetries in
+surface area and thickness. Society for Neuroscience, 2015.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -268,13 +305,14 @@ continue this work with the help of others!
 \begin{backmatter}
 
 \section*{Availability of Supporting Data}
-More information about this project can be found at: \url{https://github.com/duecredit/duecredit}. Further data and files supporting this project are hosted in the \emph{GigaScience} repository REFXXX.
+More information about this project can be found at: \url{https://github.com/binarybottle/roygbiv}. Further data and files supporting this project are hosted in the \emph{GigaScience} repository REFXXX.
 
 \section*{Competing interests}
 None
 
 \section*{Author's contributions}
-KA and KA performed the project and wrote the report.
+AK and AK performed the project and wrote the report. BC extended this
+work and is actively maintaining ROYGBIV.
 
 \section*{Acknowledgements}
 The authors would like to thank the organizers and attendees of the 2015
