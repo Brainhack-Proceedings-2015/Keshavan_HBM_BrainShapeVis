@@ -60,9 +60,9 @@ gigascience-ref: REFXXX
 ...
 
 # Introduction
-Our goal for the hackathon was to create an interactive Web browser application to visualize human brain image data processed by the [Mindboggle software package](http://mindboggle.info/)[1].
+Our goal for the hackathon was to create an interactive Web browser application to visualize human brain image data processed by the [Mindboggle software package](http://mindboggle.info/) \cite{Klein2005}.
 
-The Mindboggle project was initiated to improve the labeling as well as morphometry of brain imaging data, and to promote open science by making all data, software, and documentation freely and openly available. An interface for interactive visualization is essential for assessing issues in brain image processing and analysis, including surface reconstruction, labeling, and morphometry. Mindboggle processes human brain cortical surface meshes in the [VTK format](http://www.vtk.org/), and generates label and shape information for each anatomical region, where labels follow the Desikan-Killiany-Tourville protocol [2].
+The Mindboggle project was initiated to improve the labeling as well as morphometry of brain imaging data, and to promote open science by making all data, software, and documentation freely and openly available. An interface for interactive visualization is essential for assessing issues in brain image processing and analysis, including surface reconstruction, labeling, and morphometry. Mindboggle processes human brain cortical surface meshes in the [VTK format](http://www.vtk.org/), and generates label and shape information for each anatomical region, where labels follow the Desikan-Killiany-Tourville protocol \cite{Klein2012}.
 
 # Approach
 Over the course of two afternoons at the Human Brain Mapping 2015 conference’s hackathon, we evaluated several JavaScript libraries for creating browser-based WebGL visualizations of brain surfaces, including [three.js](http://threejs.org/), [XTK](https://github.com/xtk/X\#readme), and [BrainBrowser](https://brainbrowser.cbrain.mcgill.ca/). Three.js was chosen for ease of use and degree of active development and community support. To accompany these surface visualizations with graphical plots, we chose the [d3 JavaScript library](http://d3js.org/) for its flexibility and widespread use.
@@ -72,7 +72,7 @@ We completed an initial version of our browser-based interactive visualization t
 
 \begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv.png} \caption{\label{centfig} Example visualization.} \end{figure}
 
-After the hackathon, we refactored the code to use an object-based approach. This allows multiple brains to be shown simultaneously. This approach was used to create a master-slave interaction: selection of a ROI in one hemisphere loads data for display on a second hemisphere. This approach was used in a [dynamic poster presented at Society for Neuroscience in 2015](http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/) [3].
+After the hackathon, we refactored the code to use an object-based approach. This allows multiple brains to be shown simultaneously. This approach was used to create a master-slave interaction: selection of a ROI in one hemisphere loads data for display on a second hemisphere. This approach was used in a [dynamic poster presented at Society for Neuroscience in 2015](http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/) \cite{Cipollini2015}.
 
 
 \begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv-master-slave.png} \caption{\label{centfig} Example master/slave visualization.} \end{figure}
@@ -82,8 +82,4 @@ After the hackathon, we refactored the code to use an object-based approach. Thi
 We have received very positive feedback for our efforts at the hackathon, and have since received several requests and encouragement to build this visualization out to accommodate other data besides shape information and to enable the visual evaluation of thousands of brains. We hope to continue this work with the help of others!
 
 
-# References
-[1] Klein, A., & Hirsch, J. (2005). Mindboggle: a scatterbrained approach to automate brain labeling. NeuroImage, 24(2), 261-280.
-Chicago.
-[2] Klein, A., & Tourville, J. (2012). 101 labeled brain images and a consistent human cortical labeling protocol. Front. Neurosci 6.171, 10-3389.
-[3] Cipollini, B, Bartsch, H & Cottrell, G. (2015). Exploring the anatomy and genetics of cortical asymmetries in surface area and thickness. Society for Neuroscience, 2015.
+
