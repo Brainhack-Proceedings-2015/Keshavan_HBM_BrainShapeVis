@@ -72,7 +72,7 @@ We completed an initial version of our browser-based interactive visualization t
 
 \begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv.png} \caption{\label{centfig} Example visualization.} \end{figure}
 
-\begin{figure}[h!] \includegraphics[width=.42\textwidth]{d3_boxplot.png} \caption{\label{d3box} Example boxplot of selected region.} \end{figure}
+\begin{figure}[h!] \includegraphics[width=.42\textwidth]{d3_boxplot.png} \caption{\label{d3box} Example of a selected region and the accompanying boxplot.} \end{figure}
 
 \begin{figure}[h!] \includegraphics[width=.42\textwidth]{d3_boxplot_alone.png} \caption{\label{d3boxalone} Example boxplot of a selected region that shows the distributions of shape features.} \end{figure}
 
