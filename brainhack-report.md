@@ -83,7 +83,7 @@ After the hackathon, we refactored the code to use an object-based approach. Thi
 
 # Conclusions
 
-We have received very positive feedback for our efforts at the hackathon, and have since received several requests and encouragement to build this visualization out to accommodate other data besides shape information and to enable the visual evaluation of thousands of brains. We hope to continue this work with the help of others!
+We have received very positive feedback for our efforts at the hackathon, and have since received several requests and encouragement to build this visualization out to accommodate other data besides shape information and to enable the visual evaluation of thousands of brains. We hope to continue this work with the help of others! To contribute to this project, please send pull requests to [https://github.com/binarybottle/roygbiv](https://github.com/binarybottle/roygbiv).
 
 
 
