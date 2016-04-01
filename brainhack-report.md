@@ -68,18 +68,22 @@ The Mindboggle project was initiated to improve the labeling as well as morphome
 Over the course of two afternoons at the Human Brain Mapping 2015 conference’s hackathon, we evaluated several JavaScript libraries for creating browser-based WebGL visualizations of brain surfaces, including [three.js](http://threejs.org/), [XTK](https://github.com/xtk/X\#readme), and [BrainBrowser](https://brainbrowser.cbrain.mcgill.ca/). Three.js was chosen for ease of use and degree of active development and community support. To accompany these surface visualizations with graphical plots, we chose the [d3 JavaScript library](http://d3js.org/) for its flexibility and widespread use.
 
 # Results
-We completed an initial version of our browser-based interactive visualization tool; a left hemisphere of a human brain is available at [http://roygbiv.mindboggle.info](http://roygbiv.mindboggle.info). Click and drag to rotate this brain, scroll to zoom in and out, and click on any region of the brain while pressing the shift key to produce an accompanying plot of shape measures for that region. This will render all other regions transparent. Shift-click outside the brain to return opacity to all regions.
+We completed an initial version of our browser-based interactive visualization tool; a left hemisphere of a human brain is available at [http://roygbiv.mindboggle.info](http://roygbiv.mindboggle.info). Click and drag to rotate this brain, scroll to zoom in and out, and click on any region of the brain while pressing the shift key to produce an accompanying plot of shape measures for that region (fig. \ref{d3box}). This will render all other regions transparent. Figure \ref{d3boxalone} shows  the distributions of travel depth, geodesic depth, mean curvature, freesurfer curvature, and freesurfer cortical thickness for the selected region. Shift-click outside the brain to return opacity to all regions.
 
 \begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv.png} \caption{\label{centfig} Example visualization.} \end{figure}
 
+\begin{figure}[h!] \includegraphics[width=.42\textwidth]{d3_boxplot.png} \caption{\label{d3box} Example of a selected region and the accompanying boxplot.} \end{figure}
+
+\begin{figure}[h!] \includegraphics[width=.42\textwidth]{d3_boxplot_alone.png} \caption{\label{d3boxalone} Example boxplot of a selected region that shows the distributions of shape features.} \end{figure}
+
+
 After the hackathon, we refactored the code to use an object-based approach. This allows multiple brains to be shown simultaneously. This approach was used to create a master-slave interaction: selection of a ROI in one hemisphere loads data for display on a second hemisphere. This approach was used in a [dynamic poster presented at Society for Neuroscience in 2015](http://cseweb.ucsd.edu/~bcipolli/docs/posters/SfN2015/) \cite{Cipollini2015}.
 
-
-\begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv-master-slave.png} \caption{\label{centfig} Example master/slave visualization.} \end{figure}
+\begin{figure}[h!] \includegraphics[width=.42\textwidth]{roygbiv-master-slave.png} \caption{\label{master} Example master/slave visualization.} \end{figure}
 
 # Conclusions
 
-We have received very positive feedback for our efforts at the hackathon, and have since received several requests and encouragement to build this visualization out to accommodate other data besides shape information and to enable the visual evaluation of thousands of brains. We hope to continue this work with the help of others!
+We have received very positive feedback for our efforts at the hackathon, and have since received several requests and encouragement to build this visualization out to accommodate other data besides shape information and to enable the visual evaluation of thousands of brains. We hope to continue this work with the help of others! To contribute to this project, please send pull requests to [https://github.com/binarybottle/roygbiv](https://github.com/binarybottle/roygbiv).
 
 
 
